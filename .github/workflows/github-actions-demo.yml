@@ -24,7 +24,7 @@ jobs:
           docker build -t luris-test-blazor .
 
           # run inamge
-          docker rm -f luris-test-blazor || true
+          docker rm -f luris-test-blazor-thing || true
           docker run -d -p 9876:8207 --name luris-test-blazor-thing luris-test-blazor
 
           echo "it works.."
