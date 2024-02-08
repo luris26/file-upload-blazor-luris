@@ -19,11 +19,11 @@ jobs:
       - name: Check out the repository code
         uses: actions/checkout@v4
       - run: |
-        # build image
+          # build image
 
-        docker build -t luris-test-blazor .
+          docker build -t luris-test-blazor .
 
-        # run inamge
-        docker run -d -p 9876:8026 --name luris-test-blazor-thing luris-test-blazor
+          # run inamge
+          docker run -d -p 9876:8026 --name luris-test-blazor-thing luris-test-blazor
 
-        echo "it works.."
+          echo "it works.."
